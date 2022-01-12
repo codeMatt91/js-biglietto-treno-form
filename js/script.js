@@ -22,17 +22,23 @@ replicare anche lo stile estetico fornito dallo screenshot tramite CSS
 7- stamparlo in pagina
 */
 
+//! Elementi da cui raccogliere i dati dell'utente 
 const userName = document.getElementById('name').value;
 const userKm = document.getElementById('km').value;
 const rangeAge = document.getElementById('age').value;
 
 
+//! Elementi su cui devo scrivere
 const nameSurname = document.getElementById('user-name-surname');
 const offerTicket = document.getElementById('offer');
 const cabTrain = document.getElementById('cab');
 const codeTicket = document.getElementById('code');
 const priceTicket = document.getElementById('price-ticket');
 
+const generate = document.getElementById('generate');
+const remove = document.getElementById('remove');
+
+// ! Prezzo delbiglietto 
 const ticket = userKm * 0.21;
 
 
