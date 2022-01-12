@@ -23,8 +23,7 @@ replicare anche lo stile estetico fornito dallo screenshot tramite CSS
 */
 
 //! Elementi da cui raccogliere i dati dell'utente 
-const userName = document.getElementById('name').value;
-const userKm = document.getElementById('km').value;
+
 const rangeAge = document.getElementById('age').value;
 
 
@@ -38,14 +37,12 @@ const priceTicket = document.getElementById('price-ticket');
 const generate = document.getElementById('generate');
 const remove = document.getElementById('remove');
 
-// ! Prezzo delbiglietto 
-let ticket = userKm * 0.21;
 
 // ! Numero di carrozza da 1 a 9
 const numberCab = Math.floor(Math.random() * 10) + 1;
 console.log(numberCab);
 
-// ! Codice CP da 0 a 9999
+// ! Codice CP da 1 a 9999
 const codeCp = Math.floor(Math.random() * 10000) + 1;
 console.log(codeCp);
 
@@ -53,24 +50,41 @@ console.log(codeCp);
 // ! Al click devi scrivere: 
 generate.addEventListener('click', function(){
    
-   if (rangeAge === 'over65') {
-      nameSurname.innerText = userName;
+   
+   // ! Raccolgo il nome e cognome 
+   const userName = document.getElementById('name');
+   const pippo = userName.value;
+   
+   // ! Raccolgo i km 
+   const userKm = document.getElementById('km');
+   let distance = userKm.value;
+   //! prezzo biglietto 
+   let ticket = distance * 0.21;
+
+   // ! Raccolgo la fascia di età 
+   const rangeAge = document.getElementById('age');
+   const age = rangeAge.value;
+   
+   if (age === 'over65') {
+      nameSurname.innerText = pippo;
       offerTicket.innerText = 'Biglietto ridotto over-65';
       cabTrain.innerText = numberCab;
       codeTicket.innerText = codeCp;
-      priceTicket.innerText = ticket * 0.6;
-   } else if (rangeAge === 'minorenne') {
-      nameSurname.innerText = userName;
+      let prezzo = ticket * 0.6;
+      priceTicket.innerText = prezzo.toFixed(2) + '€';
+   } else if (age === 'minorenne') {
+      nameSurname.innerText = pippo;
       offerTicket.innerText = 'Biglietto ridotto minorenni';
       cabTrain.innerText = numberCab;
       codeTicket.innerText = codeCp;
-      priceTicket.innerText = ticket * 0.8;
+      let prezzo = ticket * 0.8;
+      priceTicket.innerText = prezzo.toFixed(2) + '€';
    } else {
-      nameSurname.innerText = userName;
+      nameSurname.innerText = pippo;
       offerTicket.innerText = 'Biglietto standard';
       cabTrain.innerText = numberCab;
       codeTicket.innerText = codeCp;
-      priceTicket.innerText = ticket;
+      priceTicket.innerText = ticket.toFixed(2) + '€';
    }
 
 });
