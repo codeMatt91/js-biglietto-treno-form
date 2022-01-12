@@ -39,14 +39,38 @@ const generate = document.getElementById('generate');
 const remove = document.getElementById('remove');
 
 // ! Prezzo delbiglietto 
-const ticket = userKm * 0.21;
+let ticket = userKm * 0.21;
+
+// ! Numero di carrozza da 1 a 9
+const numberCab = Math.floor(Math.random() * 10) + 1;
+console.log(numberCab);
+
+// ! Codice CP da 0 a 9999
+const codeCp = Math.floor(Math.random() * 10000) + 1;
+console.log(codeCp);
 
 
+// ! Al click devi scrivere: 
+generate.addEventListener('click', function(){
+   
+   if (rangeAge === 'over65') {
+      nameSurname.innerText = userName;
+      offerTicket.innerText = 'Biglietto ridotto over-65';
+      cabTrain.innerText = numberCab;
+      codeTicket.innerText = codeCp;
+      priceTicket.innerText = ticket * 0.6;
+   } else if (rangeAge === 'minorenne') {
+      nameSurname.innerText = userName;
+      offerTicket.innerText = 'Biglietto ridotto minorenni';
+      cabTrain.innerText = numberCab;
+      codeTicket.innerText = codeCp;
+      priceTicket.innerText = ticket * 0.8;
+   } else {
+      nameSurname.innerText = userName;
+      offerTicket.innerText = 'Biglietto standard';
+      cabTrain.innerText = numberCab;
+      codeTicket.innerText = codeCp;
+      priceTicket.innerText = ticket;
+   }
 
-if (rangeAge === 'maggiorenne') {
-   priceTicket.innerText = ticket;
-} else if (rangeAge === 'minorenne') {
-   priceTicket.innerText = ticket * 0.8;
-} else (rangeAge === 'over65') {
-   priceTicket.innerText = ticket * 0.6;
-}
+});
