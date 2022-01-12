@@ -22,4 +22,19 @@ replicare anche lo stile estetico fornito dallo screenshot tramite CSS
 7- stamparlo in pagina
 */
 
-const userName = document.getElementById('name');
+const userName = document.getElementById('name').value;
+const userKm = document.getElementById('km').value;
+const rangeAge = document.getElementById('age').value;
+const priceTicket = document.getElementById('price-ticket');
+
+const ticket = userKm * 0.21;
+
+
+
+if (rangeAge === 'maggiorenne') {
+   priceTicket.innerText = ticket;
+} else if (rangeAge === 'minorenne') {
+   priceTicket.innerText = ticket * 0.8;
+} else (rangeAge === 'over65') {
+   priceTicket.innerText = ticket * 0.6;
+}
