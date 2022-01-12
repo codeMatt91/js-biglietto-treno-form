@@ -13,10 +13,10 @@
 
 <body>
    <div class="container">
-      <div><h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2></div>
+      <div class="text-center"><h2 class="text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2></div>
 
       <!-- ! SECTION TAKE DATA FROM USER -->
-      <div class="take-data">
+      <div class="take-data bg-white my-3 p-3 rounded-3">
          <div class="row">
             <div class="col-4">
                <label for="name">Nome Cognome</label><br>
@@ -36,18 +36,21 @@
                </select>
             </div>
          </div>
-         <div>
+         <div class="text-center mt-5">
             <button id="generate">Genera</button>
             <button id="remove">Annulla</button>
          </div>
       </div>
 
+      <div class="text-center">
+         <h2 class="text-white">IL TUO BIGLIETTO</h2>
+      </div>
       <!--! SECTION TICKET -->
-      <div class="output-data py-5">
+      <div class="output-data p-5 my-3 bg-white">
          <div class="row">
             <div class="col-4">
-               <div><h5>NOME PASSEGGERO</h5></div>
-               <div id="user-name-surname"></div>
+               <div><h5 class="fw-bold">NOME PASSEGGERO</h5></div>
+               <div id="user-name-surname" class="fw-bold"></div>
             </div>
             <div class="col-8">
                <div class="row">

@@ -3,3 +3,11 @@
    padding: 0;
    box-sizing: border-box;
 }
+
+body {
+   background-color: rgb(169,42,81);
+}
+label {
+   color: rgb(169,42,81);
+   
+}
