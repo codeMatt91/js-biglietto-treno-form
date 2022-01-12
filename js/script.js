@@ -57,7 +57,6 @@ generate.addEventListener('click', function(){
    // ! Raccolgo i km 
    let distance = userKm.value;
 
-
    //! prezzo biglietto 
    let ticket = distance * 0.21;
 
@@ -95,4 +94,6 @@ remove.addEventListener('click', function(){
    cabTrain.innerText = '';
    codeTicket.innerText = '';
    priceTicket.innerText = '';
+
+
 });
