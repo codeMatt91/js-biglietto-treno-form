@@ -95,5 +95,8 @@ remove.addEventListener('click', function(){
    codeTicket.innerText = '';
    priceTicket.innerText = '';
 
+   userName.value = '';
+   userKm.value = '';
+   rangeAge.value = '';
 
 });
