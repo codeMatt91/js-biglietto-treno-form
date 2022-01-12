@@ -25,6 +25,12 @@ replicare anche lo stile estetico fornito dallo screenshot tramite CSS
 const userName = document.getElementById('name').value;
 const userKm = document.getElementById('km').value;
 const rangeAge = document.getElementById('age').value;
+
+
+const nameSurname = document.getElementById('user-name-surname');
+const offerTicket = document.getElementById('offer');
+const cabTrain = document.getElementById('cab');
+const codeTicket = document.getElementById('code');
 const priceTicket = document.getElementById('price-ticket');
 
 const ticket = userKm * 0.21;
