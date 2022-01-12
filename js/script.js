@@ -14,11 +14,12 @@ BONUS:
 replicare anche lo stile estetico fornito dallo screenshot tramite CSS
 
 1- Recuperare nome e cognome dal DOM
-2- Recuperare i km 
-3- recuperare la fascia di età del passeggero
+2- Recuperare i km dal DOM
+3- recuperare la fascia di età del passeggero dal DOM
 4- calcolare il prezzo del biglietto in base ai km
 5- applicare lo sconto in base alla fascia di età
 6- stampare il prezzo finale 
 7- stamparlo in pagina
 */
 
+const userName = document.getElementById('name');
