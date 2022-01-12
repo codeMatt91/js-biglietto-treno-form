@@ -23,9 +23,9 @@ replicare anche lo stile estetico fornito dallo screenshot tramite CSS
 */
 
 //! Elementi da cui raccogliere i dati dell'utente 
-
-const rangeAge = document.getElementById('age').value;
-
+const userName = document.getElementById('name');
+const userKm = document.getElementById('km');
+const rangeAge = document.getElementById('age');
 
 //! Elementi su cui devo scrivere
 const nameSurname = document.getElementById('user-name-surname');
@@ -52,12 +52,12 @@ generate.addEventListener('click', function(){
    
    
    // ! Raccolgo il nome e cognome 
-   const userName = document.getElementById('name');
    const pippo = userName.value;
    
    // ! Raccolgo i km 
-   const userKm = document.getElementById('km');
    let distance = userKm.value;
+
+
    //! prezzo biglietto 
    let ticket = distance * 0.21;
 
@@ -87,4 +87,12 @@ generate.addEventListener('click', function(){
       priceTicket.innerText = ticket.toFixed(2) + '€';
    }
 
+});
+
+remove.addEventListener('click', function(){
+   nameSurname.innerText = '';
+   offerTicket.innerText = '';
+   cabTrain.innerText = '';
+   codeTicket.innerText = '';
+   priceTicket.innerText = '';
 });
